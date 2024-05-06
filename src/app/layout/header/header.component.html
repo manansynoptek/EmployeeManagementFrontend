@@ -1,0 +1,2 @@
+<h3>Header</h3>
+<a [routerLink]="['/adddepartment']">Add Department</a> | <a [routerLink]="['/addemployee']">Add Employee</a> | <a [routerLink]="['/login']" *ngIf="loggedInEmployeeName === ''">login</a> | <a *ngIf="loggedInEmployeeName !== ''" (click)="logout()">logout</a>

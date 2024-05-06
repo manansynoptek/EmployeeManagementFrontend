@@ -1,0 +1,31 @@
+<!-- <div class="d-flex flex-column h-100">
+    <main class="flex-shrink-0 main">
+      <div class="container h-100">
+        <div class="bg-white mx-2 px-2 pt-3 pb-5 container-mh">
+          <div class="container">
+            <h3>
+              Welcome to Employee management!
+            </h3>
+            <a [routerLink]="['/adddepartment']">Add Department</a> | <a [routerLink]="['/addemployee']">Add Employee</a>
+            <a [routerLink]="['/login']" *ngIf="loggedInEmployeeName === ''">login</a>
+            {{loggedInEmployeeName}} | <a *ngIf="loggedInEmployeeName !== ''" (click)="logout()">logout</a>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div> -->
+
+  <div class="d-flex flex-column h-100">
+    <app-header></app-header>
+    <main class="flex-shrink-0 main">
+      <div class="container h-100">
+        <div class="bg-white mx-2 px-2 pt-3 pb-5 container-mh">
+          <div class="container">            
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </main>
+    <app-footer class="mt-auto"></app-footer>
+  </div>
