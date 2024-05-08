@@ -9,10 +9,10 @@ export class CommonService {
     constructor(private cookieService: CookieService) { }
 
     setEmployeeDetail(employeeModel: any): void {
-        if (employeeModel?.accessToken !== null) {
+                if (employeeModel?.accessToken !== null) {
             const expiryDate = new Date();
-            expiryDate.setMinutes(expiryDate.getMinutes() + 1); // Cookie will expire in 5 minutes            
-            this.cookieService.set('currentUser', JSON.stringify(employeeModel));
+            expiryDate.setMinutes(expiryDate.getMinutes() + 1); // Cookie will expire in 1 minutes            
+            this.cookieService.set('currentUser', JSON.stringify(employeeModel), expiryDate);
         }
     }
 

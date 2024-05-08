@@ -7,12 +7,13 @@ import { CommonService } from 'src/app/Services/common.service';
 import { LoginRequest } from 'src/app/models/loginrequest.model';
 import { ErrorCodeEnum } from 'src/app/shared/enums';
 
+
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-employeelogin',
+  templateUrl: './employeelogin.component.html',
+  styleUrls: ['./employeelogin.component.scss']
 })
-export class LoginComponent {
+export class EmployeeloginComponent {
   loginForm!: FormGroup;
   loginRequest!: LoginRequest;
 
@@ -57,7 +58,7 @@ export class LoginComponent {
           if (result.httpStatus === ErrorCodeEnum.Ok) {
             const employeeModel = result.data;
             this.commonService.setEmployeeDetail(employeeModel);
-            this.router.navigate(['/home']);
+            this.router.navigate(['/dashboard']);
           } else {
           }
         },

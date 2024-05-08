@@ -3,14 +3,12 @@ import { AuthenticateService } from 'src/app/Services/authenticate.service';
 import { ErrorCodeEnum } from 'src/app/shared/enums';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
-export class HomeComponent {
-  constructor(private authenticateService: AuthenticateService) {
-
-  }
+export class DashboardComponent {
+  constructor(private authenticateService: AuthenticateService) { }
 
   getDepartments(): void {
     this.authenticateService.getAllDepartments()
